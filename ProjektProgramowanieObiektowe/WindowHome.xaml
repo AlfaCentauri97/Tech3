@@ -1,0 +1,54 @@
+﻿<Window x:Class="ProjektProgramowanieObiektowe.WindowHome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="WindowHome" Height="345" Width="650" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="LightSteelBlue">
+    <Grid>
+
+        <Grid>
+            <Image gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AnimatedSource="Gif/bg2.gif" Margin="-80,-28,-27.4,-0.2" />
+        </Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20 0">
+            <Button x:Name="ButtonLogOut" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Click="ButtonBack">
+                <materialDesign:PackIcon Kind="ArrowLeft" Foreground="Red" Width="25" Height="25" />
+            </Button>
+        </StackPanel>
+        <Grid Height="103" VerticalAlignment="Bottom" Margin="0,0,-0.4,-0.2">
+            <Grid.Background>
+                <SolidColorBrush Color="Black" Opacity="0.4"/>
+            </Grid.Background>
+            <ListView VerticalAlignment="Bottom" Height="103"  Foreground="LightSteelBlue">
+                <ListViewItem VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Content="PC Games" Width="230" Background="{x:Null}" BorderBrush="{x:Null}" Uid="0"  Click="Button_Click_Home_Menu" />
+                </ListViewItem>
+                <ListViewItem VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="Consola Games" Width="230" Background="{x:Null}" BorderBrush="{x:Null}"  Uid="1" Click="Button_Click_Home_Menu"/>
+                        <materialDesign:PackIcon Kind="WheelchairAccessibility" Width="25" Foreground="#0cb4b6" Margin="10" Height="25" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="Arcade Games" Width="230" Background="{x:Null}" BorderBrush="{x:Null}" Uid="2" Click="Button_Click_Home_Menu"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="GBA Games" Width="230" Background="{x:Null}" BorderBrush="{x:Null}"  Uid="3" Click="Button_Click_Home_Menu"/>
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="Mobile Games" Width="230" Background="{x:Null}" BorderBrush="{x:Null}"  Uid="4" Click="Button_Click_Home_Menu"/>
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </Grid>
+        <DataGrid Name="DataGrid1" AutoGenerateColumns="True" HorizontalAlignment="Center" Height="180" Width="320" Margin="160,40,170,125">
+            <DataGrid.Background>
+                <SolidColorBrush Color="Black" Opacity="0.2"/>
+            </DataGrid.Background>
+        </DataGrid>
+    </Grid>
+</Window>

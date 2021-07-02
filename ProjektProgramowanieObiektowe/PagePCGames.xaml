@@ -1,0 +1,10 @@
+﻿<Page x:Class="ProjektProgramowanieObiektowe.PagePCGames"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="PagePCGames" Height="202" Width="300">
+
+    <Grid>
+        <DataGrid HorizontalAlignment="Center" Height="202"  Width="300"/>
+
+    </Grid>
+</Page>

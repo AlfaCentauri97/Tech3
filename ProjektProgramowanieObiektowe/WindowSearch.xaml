@@ -1,0 +1,43 @@
+﻿<Window x:Class="ProjektProgramowanieObiektowe.WindowSearch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="WindowSearch" Height="345" Width="650" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="LightSteelBlue">
+    <Grid>
+
+        <Grid>
+            <Image gif:ImageBehavior.RepeatBehavior="Forever" gif:ImageBehavior.AnimatedSource="Gif/bg2.gif" Margin="-80,-28,-27.4,-0.2" />
+        </Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20 0">
+            <Button x:Name="ButtonLogOut" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Click="ButtonBack">
+                <materialDesign:PackIcon Kind="ArrowLeft" Foreground="Red" Width="25" Height="25" />
+            </Button>
+        </StackPanel>
+        <Grid Height="120" VerticalAlignment="Bottom" Margin="0,0,-0.4,-0.2">
+            <Grid.Background>
+                <SolidColorBrush Color="Black" Opacity="0.4"/>
+            </Grid.Background>
+            <Grid x:Name="GridCursor" Width="100" Height="5" Background="#FF2196F3" HorizontalAlignment="Left" Margin="0,72,0,26"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0,40,0,0">
+                <Button  Width="100" Content="PC" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Uid="0" Click="Button_Click_Menu_Search"/>
+                <Button  Width="100" Content="Consol" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Uid="1" Click="Button_Click_Menu_Search"/>
+                <Button  Width="100" Content="Arcade" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Uid="2" Click="Button_Click_Menu_Search"/>
+                <Button  Width="100" Content="Mobile" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Uid="3" Click="Button_Click_Menu_Search"/>
+                <Button  Width="100" Content="GBA" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Uid="4" Click="Button_Click_Menu_Search"/>
+                <Button  Width="100" Content="Base" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" Uid="5" Click="Button_Click_Menu_Search"/>
+            </StackPanel>
+            <Rectangle Height="30" VerticalAlignment="Top"  RadiusY="10" RadiusX="10" Fill="White" Margin="236,10,263,0">
+                <Rectangle.Effect>
+                    <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <TextBox Name="txtName"  materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" RenderTransformOrigin="0.518,0.075" Margin="240,-4,284,80"/>
+        </Grid>
+        <DataGrid Name="DataGrid1" AutoGenerateColumns="True" HorizontalAlignment="Center" Height="180" Width="320" Margin="160,40,170,125">
+            <DataGrid.Background>
+                <SolidColorBrush Color="Black" Opacity="0.2"/>
+            </DataGrid.Background>
+        </DataGrid>
+    </Grid>
+</Window>
